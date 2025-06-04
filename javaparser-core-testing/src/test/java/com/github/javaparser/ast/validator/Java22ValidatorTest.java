@@ -119,4 +119,151 @@ class Java22ValidatorTest {
         ));
         assertNoProblems(result);
     }
+
+    @Test
+    void validSwitchPatternWithUnnamedPattern() {
+        ParseResult<CompilationUnit> result = javaParser.parse(COMPILATION_UNIT, provider(
+                "class Test { " +
+                "    String getType(Object obj) { " +
+                "        if (obj instanceof String _) { " +
+                "            return \"string\"; " +
+                "        } " +
+                "        return \"other\"; " +
+                "    } " +
+                "}"
+        ));
+        assertNoProblems(result);
+    }
+
+    @Test
+    void validSwitchPatternWithUnnamedPatternAndGuard() {
+        ParseResult<CompilationUnit> result = javaParser.parse(COMPILATION_UNIT, provider(
+                "class Test { void test() { try (var _ = new java.io.StringReader(\"test\")) { } catch (Exception e) { } } }"
+        ));
+        assertNoProblems(result);
+    }
+
+    @Test
+    void validSwitchPatternWithUnnamedPatternAndComplexGuard() {
+        ParseResult<CompilationUnit> result = javaParser.parse(COMPILATION_UNIT, provider(
+                "class Test { void test() { for (int _ : new int[]{1,2,3}) { try { throw new Exception(); } catch (Exception _) { } } } }"
+        ));
+        assertNoProblems(result);
+    }
+
+    @Test
+    void validUnnamedPatternInInstanceof() {
+        ParseResult<CompilationUnit> result = javaParser.parse(COMPILATION_UNIT, provider(
+                "class Test { " +
+                "    String getType(Object obj) { " +
+                "        if (obj instanceof String _) { " +
+                "            return \"string\"; " +
+                "        } " +
+                "        return \"other\"; " +
+                "    } " +
+                "}"
+        ));
+        assertNoProblems(result);
+    }
+
+    @Test
+    void validUnnamedVariableInTryCatch() {
+        ParseResult<CompilationUnit> result = javaParser.parse(COMPILATION_UNIT, provider(
+                "class Test { " +
+                "    void test(String data) { " +
+                "        try { " +
+                "            Integer.parseInt(data); " +
+                "        } catch (NumberFormatException _) { " +
+                "            System.out.println(\"Invalid number format\"); " +
+                "        } catch (RuntimeException _) { " +
+                "            System.out.println(\"Runtime error\"); " +
+                "        } " +
+                "    } " +
+                "}"
+        ));
+        assertNoProblems(result);
+    }
+
+    @Test
+    void validUnnamedVariableInTryWithResources() {
+        ParseResult<CompilationUnit> result = javaParser.parse(COMPILATION_UNIT, provider(
+                "import java.io.*; class Test { void test() { try (var _ = new java.io.StringReader(\"test\"); var _ = new java.io.StringReader(\"test2\")) { } catch (Exception e) { } } }"
+        ));
+        assertNoProblems(result);
+    }
+
+    @Test
+    void validUnnamedVariableInEnhancedForLoop() {
+        ParseResult<CompilationUnit> result = javaParser.parse(COMPILATION_UNIT, provider(
+                "import java.util.*; " +
+                "class Test { " +
+                "    void test() { " +
+                "        List<String> items = Arrays.asList(\"a\", \"b\", \"c\"); " +
+                "        int total = 0; " +
+                "        for (var _ : items) { " +
+                "            total++; " +
+                "        } " +
+                "    } " +
+                "}"
+        ));
+        assertNoProblems(result);
+    }
+
+    @Test
+    void validUnnamedVariableInAssignment() {
+        ParseResult<CompilationUnit> result = javaParser.parse(COMPILATION_UNIT, provider(
+                "import java.util.*; " +
+                "class Test { " +
+                "    String removeThreeAndReturnFirst(Queue<String> queue) { " +
+                "        String first = queue.poll(); " +
+                "        var _ = queue.poll(); " +
+                "        var _ = queue.poll(); " +
+                "        return first; " +
+                "    } " +
+                "}"
+        ));
+        assertNoProblems(result);
+    }
+
+    @Test
+    void validNestedUnnamedPatterns() {
+        ParseResult<CompilationUnit> result = javaParser.parse(COMPILATION_UNIT, provider(
+                "class Test { " +
+                "    String test(Object obj) { " +
+                "        if (obj instanceof String _) { " +
+                "            return \"string type\"; " +
+                "        } " +
+                "        return \"other type\"; " +
+                "    } " +
+                "}"
+        ));
+        assertNoProblems(result);
+    }
+
+    @Test
+    void invalidUnnamedVariableReferenceInSwitchPattern() {
+        ParseResult<CompilationUnit> result = javaParser.parse(COMPILATION_UNIT, provider(
+                "class Test { " +
+                "    void test() { " +
+                "        int _ = 42; " +
+                "        System.out.println(_); " +  // Invalid reference
+                "    } " +
+                "}"
+        ));
+        assertProblems(result, "(line 1,col 79) Unnamed variable '_' cannot be referenced");
+    }
+
+    @Test
+    void invalidUnnamedPatternReferenceInInstanceof() {
+        ParseResult<CompilationUnit> result = javaParser.parse(COMPILATION_UNIT, provider(
+                "class Test { " +
+                "    void test(Object obj) { " +
+                "        if (obj instanceof String _) { " +
+                "            System.out.println(_); " +  // Invalid reference
+                "        } " +
+                "    } " +
+                "}"
+        ));
+        assertProblems(result, "(line 1,col 112) Unnamed variable '_' cannot be referenced");
+    }
 } 

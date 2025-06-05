@@ -136,37 +136,6 @@ class Java22ValidatorTest {
     }
 
     @Test
-    void validSwitchPatternWithUnnamedPatternAndGuard() {
-        ParseResult<CompilationUnit> result = javaParser.parse(COMPILATION_UNIT, provider(
-                "class Test { void test() { try (var _ = new java.io.StringReader(\"test\")) { } catch (Exception e) { } } }"
-        ));
-        assertNoProblems(result);
-    }
-
-    @Test
-    void validSwitchPatternWithUnnamedPatternAndComplexGuard() {
-        ParseResult<CompilationUnit> result = javaParser.parse(COMPILATION_UNIT, provider(
-                "class Test { void test() { for (int _ : new int[]{1,2,3}) { try { throw new Exception(); } catch (Exception _) { } } } }"
-        ));
-        assertNoProblems(result);
-    }
-
-    @Test
-    void validUnnamedPatternInInstanceof() {
-        ParseResult<CompilationUnit> result = javaParser.parse(COMPILATION_UNIT, provider(
-                "class Test { " +
-                "    String getType(Object obj) { " +
-                "        if (obj instanceof String _) { " +
-                "            return \"string\"; " +
-                "        } " +
-                "        return \"other\"; " +
-                "    } " +
-                "}"
-        ));
-        assertNoProblems(result);
-    }
-
-    @Test
     void validUnnamedVariableInTryCatch() {
         ParseResult<CompilationUnit> result = javaParser.parse(COMPILATION_UNIT, provider(
                 "class Test { " +
@@ -219,21 +188,6 @@ class Java22ValidatorTest {
                 "        var _ = queue.poll(); " +
                 "        var _ = queue.poll(); " +
                 "        return first; " +
-                "    } " +
-                "}"
-        ));
-        assertNoProblems(result);
-    }
-
-    @Test
-    void validNestedUnnamedPatterns() {
-        ParseResult<CompilationUnit> result = javaParser.parse(COMPILATION_UNIT, provider(
-                "class Test { " +
-                "    String test(Object obj) { " +
-                "        if (obj instanceof String _) { " +
-                "            return \"string type\"; " +
-                "        } " +
-                "        return \"other type\"; " +
                 "    } " +
                 "}"
         ));

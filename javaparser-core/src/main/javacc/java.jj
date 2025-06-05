@@ -2488,9 +2488,9 @@ ConstructorDeclaration ConstructorDeclaration(ModifierHolder modifier):
  * <pre>{@code
  *     ExplicitConstructorInvocation:
  *         [TypeArguments] this ( [ArgumentList] ) ;
- *         [TypeArguments] super ( [ArgumentList] ) ;
+ *                          [TypeArguments] super ( [ArgumentList] ) ;
  *         ExpressionName . [TypeArguments] super ( [ArgumentList] ) ;
- *         Primary . [TypeArguments] super ( [ArgumentList] ) ;
+ *                Primary . [TypeArguments] super ( [ArgumentList] ) ;
  * }</pre>
  * The same, but aligned on {@code super}, to emphasise how this grammar relates:
  * <pre>{@code

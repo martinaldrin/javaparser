@@ -42,16 +42,16 @@ public class CommentsCollection {
     }
 
     public Set<LineComment> getLineComments() {
-        return comments.stream()
-                .filter(comment -> comment instanceof LineComment)
-                .map(comment -> (LineComment) comment)
+        return getComments().stream()
+                .filter(Comment::isLineComment)
+                .map(Comment::asLineComment)
                 .collect(Collectors.toCollection(() -> new TreeSet<>(NODE_BY_BEGIN_POSITION)));
     }
 
     public Set<BlockComment> getBlockComments() {
-        return comments.stream()
-                .filter(comment -> comment instanceof BlockComment)
-                .map(comment -> (BlockComment) comment)
+        return getComments().stream()
+                .filter(Comment::isBlockComment)
+                .map(Comment::asBlockComment)
                 .collect(Collectors.toCollection(() -> new TreeSet<>(NODE_BY_BEGIN_POSITION)));
     }
 
@@ -59,6 +59,13 @@ public class CommentsCollection {
         return comments.stream()
                 .filter(comment -> comment instanceof JavadocComment)
                 .map(comment -> (JavadocComment) comment)
+                .collect(Collectors.toCollection(() -> new TreeSet<>(NODE_BY_BEGIN_POSITION)));
+    }
+
+    public Set<MarkdownComment> getMarkdownComments() {
+        return getComments().stream()
+                .filter(Comment::isMarkdownComment)
+                .map(Comment::asMarkdownComment)
                 .collect(Collectors.toCollection(() -> new TreeSet<>(NODE_BY_BEGIN_POSITION)));
     }
 

@@ -1,1 +1,179 @@
-0 problems in 0 files
+com/github/javaparser/symbolsolver/javaparsermodel/contexts/AbstractJavaParserContext.java
+(line 56,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 58,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 69,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 71,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 81,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 83,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 185,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 187,col 5) Markdown comment should not be empty. Consider removing or adding content.
+
+com/github/javaparser/symbolsolver/javaparsermodel/contexts/AnnotationDeclarationContext.java
+(line 71,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 73,col 5) Markdown comment should not be empty. Consider removing or adding content.
+
+com/github/javaparser/symbolsolver/javaparsermodel/contexts/ClassOrInterfaceDeclarationContext.java
+(line 46,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 48,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 56,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 58,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 126,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 128,col 5) Markdown comment should not be empty. Consider removing or adding content.
+
+com/github/javaparser/symbolsolver/javaparsermodel/contexts/CompilationUnitContext.java
+(line 58,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 60,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 62,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 64,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 70,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 72,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 378,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 380,col 5) Markdown comment should not be empty. Consider removing or adding content.
+
+com/github/javaparser/symbolsolver/javaparsermodel/contexts/ConstructorContext.java
+(line 36,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 38,col 5) Markdown comment should not be empty. Consider removing or adding content.
+
+com/github/javaparser/symbolsolver/javaparsermodel/contexts/EnumDeclarationContext.java
+(line 80,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 82,col 5) Markdown comment should not be empty. Consider removing or adding content.
+
+com/github/javaparser/symbolsolver/javaparsermodel/contexts/LambdaExprContext.java
+(line 251,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 253,col 5) Markdown comment should not be empty. Consider removing or adding content.
+
+com/github/javaparser/symbolsolver/javaparsermodel/contexts/MethodCallExprContext.java
+(line 45,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 47,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 53,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 55,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 173,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 175,col 5) Markdown comment should not be empty. Consider removing or adding content.
+
+com/github/javaparser/symbolsolver/javaparsermodel/contexts/MethodContext.java
+(line 36,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 38,col 5) Markdown comment should not be empty. Consider removing or adding content.
+
+com/github/javaparser/symbolsolver/javaparsermodel/contexts/MethodReferenceExprContext.java
+(line 50,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 52,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 58,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 60,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 97,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 99,col 5) Markdown comment should not be empty. Consider removing or adding content.
+
+com/github/javaparser/symbolsolver/javaparsermodel/contexts/RecordDeclarationContext.java
+(line 48,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 50,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 58,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 60,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 142,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 144,col 5) Markdown comment should not be empty. Consider removing or adding content.
+
+com/github/javaparser/symbolsolver/javaparsermodel/declarations/JavaParserClassDeclaration.java
+(line 55,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 57,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 63,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 65,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 76,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 78,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 100,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 102,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 156,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 158,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 446,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 448,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 466,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 468,col 5) Markdown comment should not be empty. Consider removing or adding content.
+
+com/github/javaparser/symbolsolver/javaparsermodel/declarations/JavaParserInterfaceDeclaration.java
+(line 389,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 391,col 5) Markdown comment should not be empty. Consider removing or adding content.
+
+com/github/javaparser/symbolsolver/javaparsermodel/declarations/JavaParserRecordDeclaration.java
+(line 64,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 66,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 72,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 74,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 82,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 84,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 106,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 108,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 202,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 204,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 515,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 517,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 529,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 531,col 5) Markdown comment should not be empty. Consider removing or adding content.
+
+com/github/javaparser/symbolsolver/logic/AbstractClassDeclaration.java
+(line 38,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 40,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 80,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 82,col 5) Markdown comment should not be empty. Consider removing or adding content.
+
+com/github/javaparser/symbolsolver/reflectionmodel/ReflectionAnnotationDeclaration.java
+(line 47,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 49,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 55,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 57,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 69,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 71,col 5) Markdown comment should not be empty. Consider removing or adding content.
+
+com/github/javaparser/symbolsolver/reflectionmodel/ReflectionClassDeclaration.java
+(line 54,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 56,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 62,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 64,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 90,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 92,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 401,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 403,col 5) Markdown comment should not be empty. Consider removing or adding content.
+
+com/github/javaparser/symbolsolver/reflectionmodel/ReflectionEnumDeclaration.java
+(line 52,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 54,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 60,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 62,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 91,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 93,col 5) Markdown comment should not be empty. Consider removing or adding content.
+
+com/github/javaparser/symbolsolver/reflectionmodel/ReflectionInterfaceDeclaration.java
+(line 55,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 57,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 63,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 65,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 77,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 79,col 5) Markdown comment should not be empty. Consider removing or adding content.
+
+com/github/javaparser/symbolsolver/reflectionmodel/ReflectionRecordDeclaration.java
+(line 54,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 56,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 62,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 64,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 93,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 95,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 438,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 440,col 5) Markdown comment should not be empty. Consider removing or adding content.
+
+com/github/javaparser/symbolsolver/resolution/typeinference/Bound.java
+(line 35,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 37,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 43,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 45,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 53,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 55,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 120,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 122,col 5) Markdown comment should not be empty. Consider removing or adding content.
+
+com/github/javaparser/symbolsolver/resolution/typeinference/TypeInference.java
+(line 58,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 60,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 72,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 74,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 569,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 571,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 586,col 5) Markdown comment should not be empty. Consider removing or adding content.
+(line 588,col 5) Markdown comment should not be empty. Consider removing or adding content.
+
+134 problems in 22 files

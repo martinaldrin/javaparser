@@ -1,1 +1,36 @@
-0 problems in 0 files
+com/github/javaparser/issues/Issue2627Test.java
+(line 116,col 5) Markdown comment content should not start with additional forward slashes.
+
+com/github/javaparser/utils/PositionUtilsTest.java
+(line 152,col 9) Markdown comment content should not start with additional forward slashes.
+(line 153,col 9) Markdown comment content should not start with additional forward slashes.
+(line 154,col 9) Markdown comment content should not start with additional forward slashes.
+(line 155,col 9) Markdown comment content should not start with additional forward slashes.
+(line 156,col 9) Markdown comment content should not start with additional forward slashes.
+(line 157,col 9) Markdown comment content should not start with additional forward slashes.
+(line 158,col 9) Markdown comment content should not start with additional forward slashes.
+(line 159,col 9) Markdown comment content should not start with additional forward slashes.
+(line 184,col 9) Markdown comment content should not start with additional forward slashes.
+(line 185,col 9) Markdown comment content should not start with additional forward slashes.
+(line 186,col 9) Markdown comment content should not start with additional forward slashes.
+(line 187,col 9) Markdown comment content should not start with additional forward slashes.
+(line 188,col 9) Markdown comment content should not start with additional forward slashes.
+(line 189,col 9) Markdown comment content should not start with additional forward slashes.
+(line 190,col 9) Markdown comment content should not start with additional forward slashes.
+(line 191,col 9) Markdown comment content should not start with additional forward slashes.
+(line 216,col 9) Markdown comment content should not start with additional forward slashes.
+(line 217,col 9) Markdown comment content should not start with additional forward slashes.
+(line 218,col 9) Markdown comment content should not start with additional forward slashes.
+(line 219,col 9) Markdown comment content should not start with additional forward slashes.
+(line 220,col 9) Markdown comment content should not start with additional forward slashes.
+(line 221,col 9) Markdown comment content should not start with additional forward slashes.
+(line 222,col 9) Markdown comment content should not start with additional forward slashes.
+(line 258,col 9) Markdown comment content should not start with additional forward slashes.
+(line 259,col 9) Markdown comment content should not start with additional forward slashes.
+(line 260,col 9) Markdown comment content should not start with additional forward slashes.
+(line 261,col 9) Markdown comment content should not start with additional forward slashes.
+(line 262,col 9) Markdown comment content should not start with additional forward slashes.
+(line 263,col 9) Markdown comment content should not start with additional forward slashes.
+(line 264,col 9) Markdown comment content should not start with additional forward slashes.
+
+31 problems in 2 files

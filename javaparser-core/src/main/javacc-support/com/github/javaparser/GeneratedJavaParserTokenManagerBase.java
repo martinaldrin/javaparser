@@ -25,13 +25,17 @@ import com.github.javaparser.ast.comments.BlockComment;
 import com.github.javaparser.ast.comments.Comment;
 import com.github.javaparser.ast.comments.JavadocComment;
 import com.github.javaparser.ast.comments.LineComment;
+import com.github.javaparser.ast.comments.MarkdownComment;
 
-import static com.github.javaparser.GeneratedJavaParserConstants.*;
+import static com.github.javaparser.GeneratedJavaParserConstants.JAVADOC_COMMENT;
+import static com.github.javaparser.GeneratedJavaParserConstants.MULTI_LINE_COMMENT;
+import static com.github.javaparser.GeneratedJavaParserConstants.SINGLE_LINE_COMMENT;
 
 /**
  * Base class for {@link com.github.javaparser.GeneratedJavaParserTokenManager}
  */
 abstract class GeneratedJavaParserTokenManagerBase {
+    
     /**
      * Create a TokenRange that spans exactly one token
      */
@@ -51,8 +55,14 @@ abstract class GeneratedJavaParserTokenManagerBase {
         } else if (token.kind == MULTI_LINE_COMMENT) {
             return new BlockComment(tokenRange(token), commentText.substring(2, commentText.length() - 2));
         } else if (token.kind == SINGLE_LINE_COMMENT) {
-            return new LineComment(tokenRange(token), commentText.substring(2));
+            // Check if this is a markdown comment (starts with ///)
+            if (commentText.startsWith("///")) {
+                return new MarkdownComment(tokenRange(token), commentText.substring(3));
+            } else {
+                return new LineComment(tokenRange(token), commentText.substring(2));
+            }
+        } else {
+            throw new AssertionError("Unexpectedly got passed a non-comment token.");
         }
-        throw new AssertionError("Unexpectedly got passed a non-comment token.");
     }
 }

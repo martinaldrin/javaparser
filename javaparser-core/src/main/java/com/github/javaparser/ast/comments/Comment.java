@@ -42,6 +42,7 @@ import java.util.function.Consumer;
  * @see BlockComment
  * @see LineComment
  * @see JavadocComment
+ * @see MarkdownComment
  */
 public abstract class Comment extends Node {
 
@@ -218,6 +219,25 @@ public abstract class Comment extends Node {
 
     @Generated("com.github.javaparser.generator.core.node.TypeCastingGenerator")
     public Optional<LineComment> toLineComment() {
+        return Optional.empty();
+    }
+
+    @Generated("com.github.javaparser.generator.core.node.TypeCastingGenerator")
+    public boolean isMarkdownComment() {
+        return false;
+    }
+
+    @Generated("com.github.javaparser.generator.core.node.TypeCastingGenerator")
+    public MarkdownComment asMarkdownComment() {
+        throw new IllegalStateException(
+                f("%s is not MarkdownComment, it is %s", this, this.getClass().getSimpleName()));
+    }
+
+    @Generated("com.github.javaparser.generator.core.node.TypeCastingGenerator")
+    public void ifMarkdownComment(Consumer<MarkdownComment> action) {}
+
+    @Generated("com.github.javaparser.generator.core.node.TypeCastingGenerator")
+    public Optional<MarkdownComment> toMarkdownComment() {
         return Optional.empty();
     }
 

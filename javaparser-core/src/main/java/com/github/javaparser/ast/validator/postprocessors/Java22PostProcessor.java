@@ -20,8 +20,8 @@
  */
 package com.github.javaparser.ast.validator.postprocessors;
 
-import com.github.javaparser.ParserConfiguration;
 import com.github.javaparser.ParseResult;
+import com.github.javaparser.ParserConfiguration;
 import com.github.javaparser.ast.Node;
 
 /**
@@ -34,5 +34,4 @@ public class Java22PostProcessor extends Java21PostProcessor {
         super.postProcess(result, configuration);
         // We don't need additional post-processing since validation is handled by Java22Validator
     }
-
-} 
+}

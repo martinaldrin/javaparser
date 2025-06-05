@@ -20,12 +20,12 @@
 package com.github.javaparser.ast.validator.language_level_validations;
 
 import com.github.javaparser.ast.Node;
-import com.github.javaparser.ast.validator.SingleNodeTypeValidator;
-import com.github.javaparser.ast.validator.Validator;
-import com.github.javaparser.ast.expr.PatternExpr;
-import com.github.javaparser.ast.expr.NameExpr;
 import com.github.javaparser.ast.body.Parameter;
 import com.github.javaparser.ast.body.VariableDeclarator;
+import com.github.javaparser.ast.expr.NameExpr;
+import com.github.javaparser.ast.expr.PatternExpr;
+import com.github.javaparser.ast.validator.SingleNodeTypeValidator;
+import com.github.javaparser.ast.validator.Validator;
 
 /**
  * This validator validates according to Java 22 syntax rules.
@@ -42,37 +42,34 @@ public class Java22Validator extends Java21Validator {
      * Part of JEP 456: Unnamed Variables & Patterns
      * @see <a href="https://openjdk.org/jeps/456">JEP 456: Unnamed Variables & Patterns</a>
      */
-    final Validator unnamedReferenceValidator = new SingleNodeTypeValidator<>(NameExpr.class,
-        (n, reporter) -> {
-            if (n.getNameAsString().equals("_")) {
-                // Check if this is a reference (not a declaration)
-                if (n.getParentNode().isPresent()) {
-                    Node parent = n.getParentNode().get();
-                    // Skip if this is part of a declaration
-                    if (parent instanceof VariableDeclarator || 
-                        parent instanceof PatternExpr || 
-                        parent instanceof Parameter) {
-                        return; // This is a declaration, not a reference
-                    }
+    final Validator unnamedReferenceValidator = new SingleNodeTypeValidator<>(NameExpr.class, (n, reporter) -> {
+        if (n.getNameAsString().equals("_")) {
+            // Check if this is a reference (not a declaration)
+            if (n.getParentNode().isPresent()) {
+                Node parent = n.getParentNode().get();
+                // Skip if this is part of a declaration
+                if (parent instanceof VariableDeclarator
+                        || parent instanceof PatternExpr
+                        || parent instanceof Parameter) {
+                    // This is a declaration, not a reference
+                    return;
                 }
-                
-                // This is a reference to an unnamed variable/pattern/parameter
-                reporter.report(n, "Unnamed variable '_' cannot be referenced");
             }
+            // This is a reference to an unnamed variable/pattern/parameter
+            reporter.report(n, "Unnamed variable '_' cannot be referenced");
         }
-    );
+    });
 
     /**
      * Creates a new Java22Validator with all the validators for Java 22 features.
-     * 
+     *
      * Features validated:
      * - JEP 456: Unnamed Variables & Patterns
      */
     public Java22Validator() {
         super();
-
         // In Java 22, underscore _ is allowed as an unnamed variable/pattern
         remove(underscoreKeywordValidator);
         add(unnamedReferenceValidator);
     }
-} 
+}
